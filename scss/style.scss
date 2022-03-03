@@ -1,0 +1,86 @@
+@import '_variables';
+
+.main{
+    display: grid;
+    // grid-template: 40px 40px 40px 40px 40px / 40px 40px 40px 40px 40px;
+    gap: 5px;
+
+//     resize: both;
+//   overflow: auto;
+//   display: grid;
+//   gap: 4px;
+//   padding: 4px;
+//   border: 1px solid grey;
+//   background-color: skyblue;
+//   grid-template-rows: repeat(4, 1fr);
+//   grid-template-columns: repeat(2, 1fr);
+// grid-template-rows: repeat(2, 1fr);
+// grid-template-columns: repeat(1, 2fr) repeat(3, 1fr);
+
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto 1fr;
+
+    grid-template-areas:
+    'sidebar header header'
+    'sidebar projects annoucement'
+    'sidebar projects trending';
+
+
+    .header{
+        grid-area: header;
+        // grid-column-start: 3;
+        // grid-column-end: 6;
+        // grid-row-start: 1;
+        // grid-row-end: 3;
+
+        .search{
+            input{
+                font-size: 30px;
+                text-align: center;
+                background-color: antiquewhite;
+                width: 50%;
+                height: 20px;
+                border: 2px solid transparent   ;
+                border-radius: 50px;
+                color: black;
+                font-weight: bolder;
+                @include transition-ease;
+                &::placeholder{
+                    color: rgba(0, 0, 0, 0.6);
+                    letter-spacing: 10px;
+                }
+                &:hover, &:focus{
+                    border: 2px solid black;
+                }
+            }
+        }
+    }
+    .sidebar{
+        grid-area: sidebar;
+        // grid-column-start: 1;
+        // grid-column-end: 3;
+        // grid-row-start: 1;
+        // grid-row-end: 6;
+    }
+
+    .your-projects{
+        grid-area: projects;
+        // grid-column: 3 / 5;
+        // grid-row: 3 / 6;
+    }
+    
+    .announcements{
+        grid-area: annoucement;
+        //     grid-area: 3 / 5 / 5 / 6;
+        //     grid-column: 5/6;
+        //     grid-row: 3/5;
+        }
+        .trending{
+        grid-area: trending;
+        // grid-column: 5/6;
+        // grid-row: 5/6;
+    }
+}
+.card{
+    background-color: aqua;
+}
