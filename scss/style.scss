@@ -7,8 +7,16 @@
         padding-left: 1rem;
     }
     // grid-template: 40px 40px 40px 40px 40px / 40px 40px 40px 40px 40px;
-    gap: 5px;
-
+    // gap: 5px;
+    
+    // &::before{
+    //     content: '';
+    //     position: absolute;
+    //     width: 100%;
+    //     height: 100%;
+    //     background-color: rgba(0, 0, 0, 0.6);
+    //     z-index: -1;
+    // }
 //     resize: both;
 //   overflow: auto;
 //   display: grid;
@@ -57,34 +65,34 @@
                 align-items: center;
                 .material-icons-outlined{
                     font-size: 2rem;
-                    color: aliceblue;
-                    // height: 100%;
-                    // padding-top: 10px;
+                    color: black;
                     padding-right: 20px;
                 }
                 input{
                     font-size: 30px;
                     text-align: center;
-                    background-color: antiquewhite;
+                    // background-color: rgba(250, 235, 215, 0.253);
+                    background-color: $s-color;
                     width: 70%;
                     height: 40px;
-                    border: 2px solid transparent   ;
+                    border: 2px solid transparent;
                     border-radius: 50px;
-                    color: black;
+                    // color: rgb(131, 125, 125);
+                    color: rgba(37, 30, 30, 0.8);
                     font-weight: bolder;
                     @include transition-ease;
                     &::placeholder{
-                        color: rgba(0, 0, 0, 0.9);
+                        color: rgba(37, 30, 30, 0.8);
                         letter-spacing: 10px;
                     }
                     &:hover, &:focus{
-                        border: 2px solid black;
+                        border: 2px solid $p-color;
                     }
                 }
             }
             .search-notification{
                 @include flexCenter;
-                background-color: aquamarine;
+                // background-color: aquamarine;
                 width: 500px;
                 button{
                     padding-right: 30px;
@@ -137,10 +145,14 @@
                     outline: none;
                     border: 2px solid transparent;
                     padding: 0 10px;
+                    // background-color: $p-color;
                     cursor: pointer;
                     &:hover{
                         letter-spacing: 5px;
-                        background-color: rgb(33, 172, 177);
+                        // background-color: rgb(33, 172, 177);
+                        background-color: $p-color;
+                        color: black;
+                        font-weight: 900;
                     }
                 }
             }
@@ -148,6 +160,9 @@
     }
 
     .sidebar{
+        position: fixed;
+        width: 300px;
+        // overflow-y: scroll;
         padding-top: 50px;
         height: 100vh;
         grid-area: sidebar;
@@ -159,8 +174,10 @@
         // @include flexCenter;
         // flex-direction: column;
         // justify-content: space-around;
-        
+        // background-color: rgba(45, 189, 194, 0.5);
+        background-color: $p-color;
         .sidebar-title{
+            color: white;
             @include flexCenter;
             justify-content: flex-start;
             padding-left: 30px;
@@ -175,6 +192,7 @@
             @include transition-ease;
             li{
                 a{
+                    color: white;
                     @include flexCenter;
                 }
                 span{
@@ -199,6 +217,8 @@
         grid-area: projects;
         // grid-column: 3 / 5;
         // grid-row: 3 / 6;
+        background-color: $s-color;
+        padding-top: 2rem;
         
         .card{
             display: grid;
@@ -206,12 +226,15 @@
             grid-auto-rows: 250px;
             gap: 2rem;
             padding: 1rem;
-            
             .cards{
+                &:hover{
+                    // color: aqua;
+                    transform: scale(110%,110%);
+                }
                 background-color: white;
                 border-radius: 10px;
                 box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-                border-left: 8px solid red;
+                border-left: 8px solid pink;
                 padding: 2rem;
                 .cards-title{
                     font-weight: 700;
@@ -246,20 +269,40 @@
         //     grid-area: 3 / 5 / 5 / 6;
         //     grid-column: 5/6;
             // grid-row: 3/5;
-        width: 350px;
+        width: 400px;
         // background-color: black;
         border-radius: 10px;
         // height: 450px;
         // margin-bottom: 50px;
         padding-top: 0;
-        padding-right: 5px;
+        padding-right: 1rem;
         // height: 400px;
         // background-color: black;
+        
+        background-color: $s-color;
+        padding-top: 2rem;
         h3{
             padding-left: 0;
             padding-bottom: 10px;
         }
         .anoun-card{
+            &:hover{
+            // color: aqua;
+            // transform: scale(110%,110%);
+            // color: white;
+            // background-color: $p-color;
+            .anoun-title{
+                font-size: 1.5rem;
+                letter-spacing: 2px;
+            }
+            .anoun-desc{
+                font-weight: 700;
+                transition: 0.2s;
+            }
+            cursor: pointer;
+        }
+        transition: 0.2s !important;
+            
             margin-bottom: 0.5rem;
             padding: 1rem;
             background-color: white;
@@ -283,7 +326,10 @@
         // grid-column: 5/6;
         // grid-row: 5/6;
         padding-top: 20px;
-         .card {
+        .card {
+            border-radius: 10px;
+             background-color: white;
+
             padding: 1.5rem;
           }
           
@@ -292,10 +338,17 @@
               align-items: center;
               gap: 1rem;
               cursor: pointer;
+              padding-bottom: 2px;
+              transition: 0.1s;
+              border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+              &:hover{
+                  letter-spacing: 2px;
+              }
             }
             
             .trend + .trend {
                 margin-top: 1.5rem;
+                transition: 0.1s;
             }
             
             .trend .picture {
@@ -306,6 +359,7 @@
             }
             
             .trend .account {
+                transition: 0.1s;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
@@ -317,13 +371,16 @@
                 font-weight: 500;
                 margin-bottom: 0.15rem;
                 font-size: 1.2rem;
+                transition: 0.1s;
                 font-weight: 700;
                 letter-spacing: 2px;
             }
             .card-text{
                 font-weight: 500;
                 font-size: 1.1rem;
+                transition: 0.1s;
                 letter-spacing: 1ddpx;
+
             }
           
           .trend-1 .picture {

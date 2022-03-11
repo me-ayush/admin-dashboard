@@ -22,7 +22,6 @@ ul {
 .main {
   display: -ms-grid;
   display: grid;
-  gap: 5px;
   -ms-grid-columns: 300px 1fr;
       grid-template-columns: 300px 1fr;
   -ms-grid-rows: auto 1fr;
@@ -95,46 +94,46 @@ ul {
 
 .main .header .search .search-main .material-icons-outlined {
   font-size: 2rem;
-  color: aliceblue;
+  color: black;
   padding-right: 20px;
 }
 
 .main .header .search .search-main input {
   font-size: 30px;
   text-align: center;
-  background-color: antiquewhite;
+  background-color: #e0f2fe;
   width: 70%;
   height: 40px;
   border: 2px solid transparent;
   border-radius: 50px;
-  color: black;
+  color: rgba(37, 30, 30, 0.8);
   font-weight: bolder;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
 .main .header .search .search-main input::-webkit-input-placeholder {
-  color: rgba(0, 0, 0, 0.9);
+  color: rgba(37, 30, 30, 0.8);
   letter-spacing: 10px;
 }
 
 .main .header .search .search-main input:-ms-input-placeholder {
-  color: rgba(0, 0, 0, 0.9);
+  color: rgba(37, 30, 30, 0.8);
   letter-spacing: 10px;
 }
 
 .main .header .search .search-main input::-ms-input-placeholder {
-  color: rgba(0, 0, 0, 0.9);
+  color: rgba(37, 30, 30, 0.8);
   letter-spacing: 10px;
 }
 
 .main .header .search .search-main input::placeholder {
-  color: rgba(0, 0, 0, 0.9);
+  color: rgba(37, 30, 30, 0.8);
   letter-spacing: 10px;
 }
 
 .main .header .search .search-main input:hover, .main .header .search .search-main input:focus {
-  border: 2px solid black;
+  border: 2px solid #de985e;
 }
 
 .main .header .search .search-notification {
@@ -147,7 +146,6 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: aquamarine;
   width: 500px;
 }
 
@@ -250,10 +248,14 @@ ul {
 
 .main .header .profile .profile-buttons button:hover {
   letter-spacing: 5px;
-  background-color: #21acb1;
+  background-color: #de985e;
+  color: black;
+  font-weight: 900;
 }
 
 .main .sidebar {
+  position: fixed;
+  width: 300px;
   padding-top: 50px;
   height: 100vh;
   -ms-grid-row: 1;
@@ -261,9 +263,11 @@ ul {
   -ms-grid-column: 1;
   grid-area: sidebar;
   font-size: 2rem;
+  background-color: #de985e;
 }
 
 .main .sidebar .sidebar-title {
+  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -311,6 +315,7 @@ ul {
 }
 
 .main .sidebar .nav-1 li a, .main .sidebar .nav-2 li a {
+  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -338,6 +343,8 @@ ul {
   -ms-grid-row-span: 2;
   -ms-grid-column: 2;
   grid-area: projects;
+  background-color: #e0f2fe;
+  padding-top: 2rem;
 }
 
 .main .your-projects .card {
@@ -355,8 +362,13 @@ ul {
   border-radius: 10px;
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  border-left: 8px solid red;
+  border-left: 8px solid pink;
   padding: 2rem;
+}
+
+.main .your-projects .card .cards:hover {
+  -webkit-transform: scale(110%, 110%);
+          transform: scale(110%, 110%);
 }
 
 .main .your-projects .card .cards .cards-title {
@@ -399,10 +411,12 @@ ul {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: annoucement;
-  width: 350px;
+  width: 400px;
   border-radius: 10px;
   padding-top: 0;
-  padding-right: 5px;
+  padding-right: 1rem;
+  background-color: #e0f2fe;
+  padding-top: 2rem;
 }
 
 .main .announcements h3 {
@@ -411,10 +425,27 @@ ul {
 }
 
 .main .announcements .anoun-card {
+  -webkit-transition: 0.2s !important;
+  transition: 0.2s !important;
   margin-bottom: 0.5rem;
   padding: 1rem;
   background-color: white;
   border-radius: 20px;
+}
+
+.main .announcements .anoun-card:hover {
+  cursor: pointer;
+}
+
+.main .announcements .anoun-card:hover .anoun-title {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.main .announcements .anoun-card:hover .anoun-desc {
+  font-weight: 700;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .main .announcements .anoun-card .anoun-title {
@@ -437,6 +468,8 @@ ul {
 }
 
 .main .trending .card {
+  border-radius: 10px;
+  background-color: white;
   padding: 1.5rem;
 }
 
@@ -449,10 +482,20 @@ ul {
           align-items: center;
   gap: 1rem;
   cursor: pointer;
+  padding-bottom: 2px;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.main .trending .trend:hover {
+  letter-spacing: 2px;
 }
 
 .main .trending .trend + .trend {
   margin-top: 1.5rem;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 
 .main .trending .trend .picture {
@@ -463,6 +506,8 @@ ul {
 }
 
 .main .trending .trend .account {
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -483,6 +528,8 @@ ul {
   font-weight: 500;
   margin-bottom: 0.15rem;
   font-size: 1.2rem;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
   font-weight: 700;
   letter-spacing: 2px;
 }
@@ -490,6 +537,8 @@ ul {
 .main .trending .card-text {
   font-weight: 500;
   font-size: 1.1rem;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
   letter-spacing: 1ddpx;
 }
 
