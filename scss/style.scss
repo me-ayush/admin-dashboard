@@ -2,6 +2,10 @@
 
 .main{
     display: grid;
+    h3{
+        font-size: 1.75rem;
+        padding-left: 1rem;
+    }
     // grid-template: 40px 40px 40px 40px 40px / 40px 40px 40px 40px 40px;
     gap: 5px;
 
@@ -23,7 +27,7 @@
     grid-template-areas:
     'sidebar header header'
     'sidebar projects annoucement'
-    'sidebar projects trending';
+    'sidebar projects trendinga';
 
     
 
@@ -195,20 +199,146 @@
         grid-area: projects;
         // grid-column: 3 / 5;
         // grid-row: 3 / 6;
+        
+        .card{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-auto-rows: 250px;
+            gap: 2rem;
+            padding: 1rem;
+            
+            .cards{
+                background-color: white;
+                border-radius: 10px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+                border-left: 8px solid red;
+                padding: 2rem;
+                .cards-title{
+                    font-weight: 700;
+                    font-size: 1.4rem;
+                }
+                p{
+                    font-size: 1.3rem;
+                }
+                .actions{
+                    // margin-top: auto;
+                    padding-top: 10px;
+                    align-self: flex-end;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    gap: 1.5rem;
+                    transition: 0.025s;
+                    span{
+                        cursor: pointer;
+                        color: rgba(0, 0, 0, 0.5);
+                        &:hover{
+                            color: rgba(0, 0, 0, 1);
+                        }
+                    }
+                }
+            }
+        }
     }
     
     .announcements{
         grid-area: annoucement;
         //     grid-area: 3 / 5 / 5 / 6;
         //     grid-column: 5/6;
-        //     grid-row: 3/5;
+            // grid-row: 3/5;
+        width: 350px;
+        // background-color: black;
+        border-radius: 10px;
+        // height: 450px;
+        // margin-bottom: 50px;
+        padding-top: 0;
+        padding-right: 5px;
+        // height: 400px;
+        // background-color: black;
+        h3{
+            padding-left: 0;
+            padding-bottom: 10px;
         }
-        .trending{
-        grid-area: trending;
+        .anoun-card{
+            margin-bottom: 0.5rem;
+            padding: 1rem;
+            background-color: white;
+            // border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+            // border-radius: 50px;
+            border-radius: 20px;
+            .anoun-title{
+                font-size: 1.3rem;
+                font-weight: 700;
+            }
+            .anoun-desc{
+                padding-top: 5px;
+                font-size: 1.2rem;
+                font-weight: 500;
+            }
+        }
+    }
+    .trending{
+        grid-area: trendinga;
+        max-width: 350px;
         // grid-column: 5/6;
         // grid-row: 5/6;
+        padding-top: 20px;
+         .card {
+            padding: 1.5rem;
+          }
+          
+          .trend {
+              display: flex;
+              align-items: center;
+              gap: 1rem;
+              cursor: pointer;
+            }
+            
+            .trend + .trend {
+                margin-top: 1.5rem;
+            }
+            
+            .trend .picture {
+                background-color: var(--accent);
+                border-radius: 50%;
+                width: 45px;
+                height: 45px;
+            }
+            
+            .trend .account {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                font-size: 0.9rem;
+            }
+            
+            .trend .username {
+                font-weight: 500;
+                margin-bottom: 0.15rem;
+                font-size: 1.2rem;
+                font-weight: 700;
+                letter-spacing: 2px;
+            }
+            .card-text{
+                font-weight: 500;
+                font-size: 1.1rem;
+                letter-spacing: 1ddpx;
+            }
+          
+          .trend-1 .picture {
+            background-image: var(--avatar2);
+          }
+          
+          .trend-3 .picture {
+            background-image: var(--avatar3);
+          }
+          
+          .trend-4 .picture {
+            background-image: var(--avatar4);
+          }
     }
 }
-.card{
-    background-color: aqua;
-}
+        // .card{
+        //     background-color: aqua;
+        // }
