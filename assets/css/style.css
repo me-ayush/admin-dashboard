@@ -19,6 +19,11 @@ ul {
   list-style: none;
 }
 
+img {
+  max-width: 80px;
+  border-radius: 50%;
+}
+
 .main {
   display: -ms-grid;
   display: grid;
@@ -146,7 +151,22 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 500px;
+}
+
+.main .header .search .search-notification img {
+  max-width: 50px;
+}
+
+.main .header .search .search-notification p {
+  margin-top: -10px;
+  padding-left: 10px;
 }
 
 .main .header .search .search-notification button {
@@ -191,7 +211,7 @@ ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 40px 50px 10px 20px;
+  padding: 10px 50px 10px 20px;
 }
 
 .main .header .profile .profile-main {
@@ -215,6 +235,7 @@ ul {
 .main .header .profile .profile-main p {
   font-size: 1.2rem;
   line-height: 1px;
+  padding-left: 3px;
 }
 
 .main .header .profile .profile-buttons {
@@ -483,26 +504,21 @@ ul {
   gap: 1rem;
   cursor: pointer;
   padding-bottom: 2px;
-  -webkit-transition: 0.1s;
-  transition: 0.1s;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-.main .trending .trend:hover {
+.main .trending .trend:hover .username, .main .trending .trend:hover .name {
   letter-spacing: 2px;
+}
+
+.main .trending .trend img {
+  max-width: 45px;
 }
 
 .main .trending .trend + .trend {
   margin-top: 1.5rem;
   -webkit-transition: 0.1s;
   transition: 0.1s;
-}
-
-.main .trending .trend .picture {
-  background-color: var(--accent);
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
 }
 
 .main .trending .trend .account {
@@ -540,17 +556,5 @@ ul {
   -webkit-transition: 0.1s;
   transition: 0.1s;
   letter-spacing: 1ddpx;
-}
-
-.main .trending .trend-1 .picture {
-  background-image: var(--avatar2);
-}
-
-.main .trending .trend-3 .picture {
-  background-image: var(--avatar3);
-}
-
-.main .trending .trend-4 .picture {
-  background-image: var(--avatar4);
 }
 /*# sourceMappingURL=style.css.map */

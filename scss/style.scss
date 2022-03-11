@@ -1,5 +1,10 @@
 @import '_variables';
 
+img{
+    max-width: 80px;
+    border-radius: 50%;
+}
+
 .main{
     display: grid;
     h3{
@@ -92,6 +97,17 @@
             }
             .search-notification{
                 @include flexCenter;
+                align-items: center;
+                align-self: center;
+                img{
+                    max-width: 50px;
+                    // padding-right: 10px
+                }
+                p{
+                    margin-top: -10px;
+                    padding-left: 10px
+                }
+                @include flexCenter;
                 // background-color: aquamarine;
                 width: 500px;
                 button{
@@ -119,7 +135,7 @@
             // padding-left : 20px;
             // padding-right: 50px;
             // padding-bottom: 10px;
-            padding: 40px 50px 10px 20px;
+            padding: 10px 50px 10px 20px;
             .profile-main{
                 @include flexCenter;
                 flex-wrap: wrap;
@@ -129,6 +145,7 @@
                 p{
                     font-size: 1.2rem;
                     line-height: 1px;
+                    padding-left: 3px;
                 }
             }
             .profile-buttons{
@@ -339,23 +356,19 @@
               gap: 1rem;
               cursor: pointer;
               padding-bottom: 2px;
-              transition: 0.1s;
+            //   transition: 0.1s;
               border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-              &:hover{
-                  letter-spacing: 2px;
+              &:hover .username, &:hover .name{
+                    letter-spacing: 2px;
+              }
+              img{
+                  max-width: 45px;
               }
             }
             
             .trend + .trend {
                 margin-top: 1.5rem;
                 transition: 0.1s;
-            }
-            
-            .trend .picture {
-                background-color: var(--accent);
-                border-radius: 50%;
-                width: 45px;
-                height: 45px;
             }
             
             .trend .account {
@@ -382,18 +395,6 @@
                 letter-spacing: 1ddpx;
 
             }
-          
-          .trend-1 .picture {
-            background-image: var(--avatar2);
-          }
-          
-          .trend-3 .picture {
-            background-image: var(--avatar3);
-          }
-          
-          .trend-4 .picture {
-            background-image: var(--avatar4);
-          }
     }
 }
         // .card{
