@@ -1,23 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <section class="main">
-        <header class="header card">
-            <div class="search">
-                <input type="text" placeholder="Search...">
+      <header class="header card ">
+        <div class="search">
+          <div class="search-main">
+            <div class="material-icons-outlined search-icon">search</div>
+            <input type="text" placeholder="Search..." />
+          </div>
+          <div class="search-notification">
+            <button>
+              <span class="material-icons-outlined"> notifications_active </span>
+            </button>
+            <div class="pic"></div>
+            <span>Ayush Kushwaha</span>
+          </div>
+        </div>
+        <div class="profile">
+          <div class="profile-main">
+            <div class="img">hello</div>
+            <div class="d-block">
+              <p>Hi, There</p>
+              Ayush Kushwaha (@ayush)
             </div>
-        </header>
-        <div class="sidebar card">Dashboard</div>
-        <div class="your-projects card">Projects</div>
-        <div class="announcements card">Announcements</div>
-        <div class="trending card">Trending</div>
+          </div>
+          <div class="profile-buttons">
+            <button>New</button>
+            <button>Upload</button>
+            <button>Share</button>
+          </div>
+        </div>
+      </header>
+      <div class="sidebar card">
+        <span class="sidebar-title"><span class="material-icons">dashboard</span> Dashboard</span>
+        <ul class="nav-1">
+          <li><a href="#"><span class="material-icons"> home </span>Home</a></li>
+          <li><a href="#"><span class="material-icons-outlined"> account_circle </span>Profile</a></li>
+          <li><a href="#"><span class="material-icons-outlined"> message </span>Message</a></li>
+          <li><a href="#"><span class="material-icons-outlined"> history </span>History</a></li>
+          <li><a href="#"><span class="material-icons-outlined"> task </span>Tasks</a></li>
+          <li><a href="#"><span class="material-icons-outlined"> groups </span>Communities</a></li>
+        </ul>
+        <ul class="nav-2">
+          <li><a href=""><span class="material-icons-outlined"> settings </span>Settings</a></li>
+          <li><a href=""><span class="material-icons-outlined"> help_center </span>Support</a></li>
+          <li><a href=""><span class="material-icons-outlined"> verified_user </span>Privacy</a></li>
+        </ul>
+      </div>
+      <div class="your-projects card">
+        <p>Your Projects</p>
+        <div class="cards">
+          <div class="cards-title">Super Cool Projects</div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quae,
+            ab ratione nemo earum, nostrum, unde eligendi repellendus
+            dignissimos sint quos qui a molestiae possimus et officia quisquam
+            accusantium voluptatum.
+          </p>
+          <div class="cards-img">
+            <img src="" alt="" />
+            <img src="" alt="" />
+            <img src="" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="announcements card">
+        <div class="announcements-site">
+          <p class="announcements-site-title">Site Maintenance</p>
+          <p class="announcements-site-disc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+            veniam incidunt, consequatur ratione delectus eos fugit voluptatibus
+            quis assumenda expedita!
+          </p>
+        </div>
+        <div class="announcements-community">
+          <p class="announcements-community-title">Community Share Day</p>
+          <p class="announcements-community-disc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+            veniam incidunt, consequatur ratione delectus eos fugit voluptatibus
+            quis assumenda expedita!
+          </p>
+        </div>
+        <div class="announcements-updated">
+          <p class="announcements-updated-title">Updated Privacy Policy</p>
+          <p class="announcements-updated-disc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+            veniam incidunt, consequatur ratione delectus eos fugit voluptatibus
+            quis assumenda expedita!
+          </p>
+        </div>
+      </div>
+      <div class="trending card">
+        <div class="person">
+          <div class="person-img"></div><div class="person-detail"><p class="person-detail-name"></p><p class="person-detail-disc"></p></div>
+          <div class="person-img"></div><div class="person-detail"><p class="person-detail-name"></p><p class="person-detail-disc"></p></div>
+          <div class="person-img"></div><div class="person-detail"><p class="person-detail-name"></p><p class="person-detail-disc"></p></div>
+          <div class="person-img"></div><div class="person-detail"><p class="person-detail-name"></p><p class="person-detail-disc"></p></div>
+        </div>
+      </div>
     </section>
-</body>
+  </body>
 </html>
